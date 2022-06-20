@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  props: ["items"],
   data: function () {
     return {
       item: "",
@@ -36,6 +37,8 @@ export default {
     createNew() {
       if (this.item == "") {
         return;
+      } else if (this.items.includes(this.item)) {
+        return alert(`${this.item} is already existed!`);
       } else {
         this.$emit("itemAdded", this.item);
         this.item = "";

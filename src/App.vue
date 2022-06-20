@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <app-header :item-count="items.length" :max-item="maxItem"></app-header>
-    <app-new-item @itemAdded="addItem"></app-new-item>
+    <app-new-item @itemAdded="addItem" :items="items"></app-new-item>
     <app-items-layout
       :items="items"
       @itemRemove="removeItem"
@@ -36,6 +36,7 @@ export default {
       if (this.items.length >= this.maxItem) {
         return alert("Please remove 1 item first");
       }
+
       this.items.push(item);
     },
     removeItem(index) {
