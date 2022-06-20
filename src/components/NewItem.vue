@@ -1,21 +1,25 @@
 <template>
   <div class="row">
     <form action="">
-      <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
-        <label for="">Say...</label>
-        <textarea
-          class="form-group"
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          v-model="item"
-        ></textarea>
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 form-group">
+          <label for="">Say...</label>
+          <textarea
+            class="form-group"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            v-model="item"
+          ></textarea>
+        </div>
       </div>
-      <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
-        <button class="btn btn-success" @click.prevent="createNew">
-          Create New Item
-        </button>
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 form-group">
+          <button class="btn btn-success" @click.prevent="createNew">
+            Create New Item
+          </button>
+        </div>
       </div>
     </form>
   </div>
@@ -37,5 +41,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+textarea {
+  width: 100%;
+  resize: none;
+}
+form {
+  width: 100%;
+}
 </style>
