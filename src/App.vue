@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <h1>Hello</h1>
+    <app-items-layout></app-items-layout>
   </div>
 </template>
 
 <script>
+import ItemsLayout from "./components/ItemsLayout.vue";
 export default {
   name: "App",
+  components: { appItemsLayout: ItemsLayout },
   data: function () {
     return {
       items: ["Good morning"],
