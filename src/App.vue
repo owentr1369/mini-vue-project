@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-items-layout></app-items-layout>
+    <app-items-layout :items="items"></app-items-layout>
   </div>
 </template>
 
