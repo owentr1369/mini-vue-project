@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <app-header></app-header>
     <app-new-item @itemAdded="addItem"></app-new-item>
     <app-items-layout
       :items="items"
@@ -16,13 +17,18 @@
 <script>
 import ItemsLayout from "./components/ItemsLayout.vue";
 import NewItem from "./components/NewItem.vue";
+import HeaderComp from "./components/HeaderComp.vue";
 export default {
   name: "App",
-  components: { appItemsLayout: ItemsLayout, appNewItem: NewItem },
+  components: {
+    appItemsLayout: ItemsLayout,
+    appNewItem: NewItem,
+    appHeader: HeaderComp,
+  },
   data: function () {
     return {
       items: [],
-      maxItems: 10,
+      maxItem: 10,
     };
   },
   methods: {
