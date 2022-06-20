@@ -13,7 +13,9 @@
         ></textarea>
       </div>
       <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
-        <button class="btn btn-success" @click.prevent="createNew"></button>
+        <button class="btn btn-success" @click.prevent="createNew">
+          Create New Item
+        </button>
       </div>
     </form>
   </div>
@@ -25,6 +27,12 @@ export default {
     return {
       item: "",
     };
+  },
+  methods: {
+    createNew() {
+      this.$emit("itemAdded", this.item);
+      this.item = "";
+    },
   },
 };
 </script>

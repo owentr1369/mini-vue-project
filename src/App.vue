@@ -1,19 +1,26 @@
 <template>
   <div id="app">
+    <app-new-item @itemAdded="addItem"></app-new-item>
     <app-items-layout :items="items"></app-items-layout>
   </div>
 </template>
 
 <script>
 import ItemsLayout from "./components/ItemsLayout.vue";
+import NewItem from "./components/NewItem.vue";
 export default {
   name: "App",
-  components: { appItemsLayout: ItemsLayout },
+  components: { appItemsLayout: ItemsLayout, appNewItem: NewItem },
   data: function () {
     return {
-      items: ["Good morning", "Hello world", "Hola"],
+      items: [],
       maxItems: 10,
     };
+  },
+  methods: {
+    addItem(item) {
+      this.items.push(item);
+    },
   },
 };
 </script>
