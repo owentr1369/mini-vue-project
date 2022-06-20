@@ -2,6 +2,11 @@
   <div id="app">
     <app-new-item @itemAdded="addItem"></app-new-item>
     <app-items-layout :items="items"></app-items-layout>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div class="alert alert-info">Info: Click on item to delete it</div>
+      </div>
+    </div>
   </div>
 </template>
 

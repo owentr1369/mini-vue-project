@@ -34,8 +34,12 @@ export default {
   },
   methods: {
     createNew() {
-      this.$emit("itemAdded", this.item);
-      this.item = "";
+      if (this.item == "") {
+        return;
+      } else {
+        this.$emit("itemAdded", this.item);
+        this.item = "";
+      }
     },
   },
 };
