@@ -9,13 +9,11 @@
           aria-valuenow="40"
           aria-valuemin="0"
           aria-valuemax="100"
-          style="
-             {
-              width: (itemCount/maxItem) * 100 +'%';
-            }
-          "
+          :style="{
+            width: (itemCount / maxItem) * 100 + '%',
+          }"
         ></div>
-        <span>{{ itemCount }}/{{ maxItem }}</span>
+        {{ itemCount }}/{{ maxItem }}
       </div>
     </div>
   </div>
